@@ -39,7 +39,7 @@ async def link_handler(bot, message):
     session = requests.Session()
     resp = session.head(Link, allow_redirects=True)
     short_link = await post_shortlink(resp.url)
-    shortlink = ('https://www.cofilink.com/share-video?videoid='+short_link)
+    shortlink = ('https://www.pdisk.me/share-video?videoid='+short_link)
     txt = stringliteral.replace(Link, shortlink)
     try:
         await message.reply(f'{txt}', quote=True)
